@@ -32,6 +32,6 @@ ENV BIRD_HOST_IP="127.0.0.1"
 ADD bird.conf.template /bird/bird.conf.template
 
 EXPOSE 60179
-USER 1001
+USER 0
 
 ENTRYPOINT ["/container-scripts/entrypoint.sh"]
