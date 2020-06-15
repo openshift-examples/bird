@@ -25,6 +25,8 @@ COPY --from=builder /opt/bird-1.6.8 /opt/bird-1.6.8
 
 ENV PATH=/opt/bird-1.6.8/sbin:${PATH}
 
+RUN setcap cap_net_raw,cap_net_admin+p /opt/bird-1.6.8/sbin/bird
+
 RUN mkdir -p /bird/kernel && \
     chmod g+w /bird /opt/bird-1.6.8/var/run
 

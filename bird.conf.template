@@ -1,4 +1,4 @@
-log syslog { debug, trace, info, remote, warning, error, auth, fatal, bug };
+log stderr all;
 
 router id $BIRD_HOST_IP;
 
